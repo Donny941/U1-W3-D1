@@ -4,7 +4,7 @@
 */
 const stringConc = function (x, y) {
   let firstChar = x.substring(0, 2);
-  let lastChar = y.substring(-1, 3);
+  let lastChar = y.substring(y.length - 3);
   return firstChar + lastChar;
 };
 
