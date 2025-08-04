@@ -27,6 +27,7 @@ const arrayOfTen = function () {
 };
 
 let arrayRes = arrayOfTen();
+
 console.log(arrayRes);
 
 console.log("%===================================%");
@@ -57,9 +58,7 @@ console.log("%===================================%");
 Scrivi una funzione per sommare i numeri contenuti in un array
 */
 let summed = 0;
-const sum = evenNum.forEach((num) => {
-  summed += num;
-});
+evenNum.forEach((num) => (summed += num));
 
 console.log(summed);
 
@@ -116,8 +115,11 @@ const oddNumbers = function () {
   }
   return oddNum;
 };
+
 let oddest = oddNumbers();
+
 console.log(oddest);
+
 console.log("%===================================%");
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -224,10 +226,11 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
 Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+
 const oldest = function () {
   let oldest = movies[0];
   movies.forEach((movie) => {
-    if (movie.Year < oldest.Year) {
+    if (parseInt(movie.Year) < parseInt(oldest.Year)) {
       oldest = movie;
     }
   });
